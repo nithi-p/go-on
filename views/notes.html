@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<% include title %>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css"  href="/module/semantic-ui-input/input.min.css">
+<link rel="stylesheet" type="text/css"  href="/module/semantic-ui-button/button.min.css">
+<link rel="stylesheet" type="text/css"  href="/module/semantic-ui-icon/icon.min.css">
+<link rel="stylesheet" type="text/css"  href="/module/semantic-ui-label/label.min.css">
+<link rel="stylesheet" type="text/css"  href="../css/main.css">
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <script type="text/javascript">
+      var mykey = '<%= key %>';
+    </script>
+
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+  </head>
+  <body>
+
+     <div class="ui container">
+
+<div id="status"><!-- STATUS -->
+<div class="load loadShow"><div class="loader"></div></div>
+</div> <!-- END OF STATUS -->
+
+
+<div class="menuBottom">
+                <div class="row">
+                      <div class="col-6 padding0">
+                               <a class="ui fluid icon blue button homeButton" id="exploreButton">
+                              <i class="marker icon"></i>
+                            </a>
+                        
+                      </div>
+                     <div class="col-6 padding0">
+                  
+                              <a class="ui fluid icon blue button homeButton" href="/home">
+                   
+                         <i class="home icon"></i>
+                      </a>
+                         
+                                        
+                      </div>
+
+
+
+                    </div>
+
+
+
+
+</div>
+
+         <div id="notes"><div class="padding20 margin20 center">กำลังเข้าสู่ระบบ</div></div>
+      
+
+    
+    
+    </div>
+<div class="load"><div class="loader">Loading...</div></div>
+    <% include analytic %>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+   <div id="slides" class="marginTop15">
+                 <div class="slide showing">GO ON SUNDAY PROJECT</div>
+                 <div class="slide">LET'S PLEDGE TO DONATE BLOOD</div>
+                <div class="slide">1 DONOR 1 SUNDAY</div>
+                 <div class="slide">ANY SUNDAY / ANYWHERE ON EARTH</div>
+                  <div class="slide">CHOOSE YOUR SUNDAY BELOW</div>
+                   <div class="slide">BLOOD COMES AND GOES</div>
+                   <div class="slide">PEOPLE REMAIN</div>
+
+    </div> 
+
+<script>
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+
+function nextSlide() {
+    goToSlide(currentSlide+1);
+}
+
+function goToSlide(n) {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n+slides.length)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+var check = $( "div" ).hasClass( "slide" );
+
+if(check){
+  var slideInterval = setInterval(nextSlide,2000);
+}
+
+</script>

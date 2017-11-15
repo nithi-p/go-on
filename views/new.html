@@ -1,0 +1,141 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<% include title %>
+<% include library %>
+<link rel="stylesheet" type="text/css" href="css/map.css">
+
+
+<!-- DATE & TIME -->
+<link rel="stylesheet" type="text/css" href="css/pickadate/default.css">
+<link rel="stylesheet" type="text/css" href="css/pickadate/default.date.css">
+<script type="text/javascript" src="js/pickadate/legacy.js"></script>
+<script type="text/javascript" src="js/pickadate/picker.js"></script>
+<script type="text/javascript" src="js/pickadate/picker.date.js"></script>
+<!-- END OF DATE & TIME -->
+
+
+
+<!-- DEFINE group NAME AND LOCATION VARIABLES -->
+<% if (!(lat&&lon)) { %>
+     <script>
+     var lat = "13.764928";
+     var lon = "100.538293";
+     var latlon = "13.764928,100.538293"; var zoom = "17";
+     </script>
+<% }else{ %>
+     <script>
+     var lat = "<%= lat %>";
+     var lon = "<%= lon %>";
+     var latlon = "<%= lat %>" + "," + "<%= lon %>"; var zoom = "18";
+     </script>
+<% } %>
+<% if (!group) { %>
+     <script>var group = "ใดก็ได้";</script>
+<% }else{ %>
+     <script>var group = "<%= group %>";</script>
+<% } %>
+<!-- END OF group NAME AND LOCATION VARIABLES -->
+
+
+</head>
+
+<body>
+
+<div id="mapContainer">
+           <input id="pac-input" class="controls" type="text" placeholder="ค้นหาจากชื่อสถานที่">
+           <div class="textMenu">กรุณาเลือกสถานที่รับบริจาค</div>
+
+          <div id="map-canvas"></div>
+
+          <div id="horiline"></div><div id="vertiline"></div>
+          <div id="pointer"></div><div id="pointerOuter"></div>
+
+
+
+          <div class="mapMenu">
+                      <div class="ui labeled icon fluid input addressContainer">
+                
+                      <input type="text" id="theAddress">
+                        <i class="marker icon"></i>
+                      </div>
+                      <button class="ui fluid right labeled icon large blue button" id="chooseAddress">
+                        <i class="check icon"></i>
+                        <div>เลือกตำแหน่งนี้</div>
+                      </button>
+
+          </div>
+</div> <!-- END OF MAP CONTAINER -->
+
+<div class="dashboard">
+<% include smallHeader %>
+
+<div class="ui container content center">
+
+
+
+
+<div id="status">
+  <span class="lightText">ประกาศหาเลือด</span> กรุ๊ป<%= group %>
+  <div><div class="load loadShow"><div class="loader"></div></div></div>
+</div> <!-- END OF STATUS -->
+<div class="ui fluid  big blue button" id="login">
+  <i class="facebook icon"></i>ล็อกอินด้วย FACEBOOK
+</div> <!-- END OF STATUS -->
+
+
+
+
+<div id="finalForm">
+
+
+            <button class="ui fluid labeled icon button homeButton" id="urgent">
+              <i class="emergency icon"></i>
+              <div class="leftAlign">ต้องการอย่างเร่งด่วน</div>
+            </button>
+              <div class="ui icon fluid input" id="datetimepickerContainer">
+     <input id="datetimepicker" type="text" class="ui fluid input" placeholder="ต้องการเลือดภายในวันที่">
+     <i class="calendar icon"></i>
+  </div>
+
+
+
+            <button class="ui fluid labeled icon button homeButton" id="normal">
+              <i class="heartbeat icon"></i>
+              <div class="leftAlign">ต้องการ (ไม่เร่งด่วน)</div>
+            </button>
+
+             <button class="ui fluid labeled icon button homeButton" id="routine">
+              <i class="treatment icon"></i>
+              <div class="leftAlign">ต้องการเป็นประจำ</div>
+            </button>
+
+    
+
+
+
+
+
+             <hr></hr>
+<!-- 
+<textarea placeholder="รายละเอียดกิจกรรม" class="ui input controls" id="description"></textarea>  -->
+            <button class="ui fluid right labeled icon big blue button" id="post">
+              <i class="check icon"></i>
+              <div>เสร็จ !</div>
+            </button>
+
+</div>  <!-- END FINAL FORM -->
+
+</div><!-- END OF UI CONTAINER -->
+
+</div>  <!-- END OF DASHBOARD -->
+
+<script type="text/javascript" src="js/new.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNl8tYOvWqEZ453CrQRGqRcnCXF-dUXQ&libraries=places&callback=initMap" async defer></script>
+
+
+
+<% include analytic %>
+</body>
+
+</html>

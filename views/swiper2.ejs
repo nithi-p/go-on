@@ -1,0 +1,82 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+
+
+<div class="swiper-container">
+  <div class="verti"></div>
+        <div class="swiper-wrapper">
+
+
+
+         <div class="swiper-slide">
+           
+          <span class="slot start"><i class="heart icon blink_me"></i></span>
+        </div> 
+
+
+           <div class="swiper-slide"  ng-repeat="slot in dates | orderBy:'ref' ">
+             
+            <a ng-click="!slot.fullname ? sign($index) : cannot()">
+            <span class="{{(slot.fullname) ? 'slot reserved' : 'slot' }}">
+              {{(slot.fullname) ? slot.fullname : slot.date }}
+            </span>
+           </a>
+
+
+           </div>
+
+         
+<!--             <div class="swiper-slide"><span class="slot"><i class="write icon"></i>19 พ.ย. 2016</span></div>
+            <div class="swiper-slide"><span class="slot reserved">Nithi Prasarnphanich</div> -->
+
+     <div class="swiper-slide"><span class="slot" ng-click="addDate()"><i class="plus red large icon"></i></span></div> 
+
+        </div>
+                <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+    var mySlidesAmount;
+    if ($(window).width() > 800) {
+       mySlidesAmount = '5';
+    }
+    else if ($(window).width() < 500){
+       mySlidesAmount = '3';
+    }else {
+      mySlidesAmount = '4';
+    }
+
+
+     var settings = {
+        slidesPerView: mySlidesAmount,
+        freeMode: true,
+        centeredSlides: true,
+        observer: true,
+        spaceBetween: 10,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        grabCursor: true,
+        autoplay: 2500,
+        loop: false,
+        direction: 'vertical',
+        initialSlide:0
+    };
+
+    var mySwiper = new Swiper('.swiper-container', settings);
+
+
+    </script>
+
+
+
+<div id="status"></div>
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<% include title %>
+<% include library %>
+</head>
+
+
+<body>
+<% include loader %>
+
+<script>
+
+var projectName = '<%= project %>';
+
+var theUrl = "https://go-on.herokuapp.com/location?project=" + projectName;
+window.location.replace(theUrl);
+
+
+</script>
+<% include analytic %>
+</body>
+</html>

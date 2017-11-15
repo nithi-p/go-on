@@ -1,0 +1,30 @@
+   <div id="slides" class="marginTop15">
+                 <div class="slide showing"><i class="angle double left icon"></i>GO ON SUNDAY PROJECT<i class="angle double right icon"></i></div>
+                <div class="slide"><i class="angle double left icon"></i>ร่วมกันบริจาคโลหิต 1 คน ต่อ 1 อาทิตย์<i class="angle double right icon"></i></div>
+                <div class="slide"><i class="angle double left icon"></i>ต่อลมหายใจให้เพื่อนมนุษย์<i class="angle double right icon"></i></div>
+                <div class="slide"><i class="angle double left icon"></i>อาสาเป็นตัวแทนของแต่ละอาทิตย์<i class="angle double right icon"></i></div>
+                <div class="slide"><i class="angle double left icon"></i>ด้วยการลงชื่อคุณลงบนTimelineด้านล่าง<i class="angle double right icon"></i></div>
+    </div> 
+    
+<script>
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+
+function nextSlide() {
+    goToSlide(currentSlide+1);
+}
+
+function goToSlide(n) {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n+slides.length)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+var check = $( "div" ).hasClass( "slide" );
+
+if(check){
+  var slideInterval = setInterval(nextSlide,3000);
+}
+
+</script>

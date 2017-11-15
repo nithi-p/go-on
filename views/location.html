@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<% include title %>
+
+<link rel="stylesheet" type="text/css"  href="css/main.css">
+
+
+
+
+</head>
+
+
+<body>
+<% include loader %>
+
+<script>
+
+
+var group = '<%= group %>';
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'พบปัญหาในการหาพิกัด';
+  } else {
+    var content = 'อุปกรณ์ของคุณไม่รองรับการหาพิกัด ';
+  }
+
+  alert(content);
+
+          var theUrl = "http://www.go-on.co/new?group=" + group; //PRODUCTION
+          window.location.replace(theUrl);
+  }
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      if(latitude && longitude){
+          var theUrl = "http://www.go-on.co/new?group=" + group + "&lat=" + latitude + "&lon=" + longitude;  //PRODUCTION
+          /*var theUrl = "/new?group=" + group + "&lat=" + latitude + "&lon=" + longitude;*/
+          window.location.replace(theUrl);
+      }else{
+          handleNoGeolocation(true);
+      }
+
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    handleNoGeolocation(false);
+  }
+
+
+
+
+
+     </script>
+
+
+
+</body>
+</html>

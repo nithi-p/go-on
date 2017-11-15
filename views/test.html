@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+<!--<% include title %>-->
+<title>GO ON - <%= title %></title>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+
+
+ <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+ <!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAyV6QMnIrVZ_EWGAtZJRkIsRfM2vT3_Lk",
+    authDomain: "go-on-449c6.firebaseapp.com",
+    databaseURL: "https://go-on-449c6.firebaseio.com",
+    storageBucket: "go-on-449c6.appspot.com",
+    messagingSenderId: "957605412165"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<style> 
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  overflow:hidden;
+
+}
+
+#target{
+	display:none;
+}
+
+.wording{
+  font-family: 'Lato', sans-serif;
+  left:0;
+  right:0;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  position:fixed;
+  top:15px;
+  z-index: 1000;
+  text-align: center;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body ng-controller="myCtrl">
+
+<div class="wording">
+  <div><img src="/img/go-on-logo.png" alt="GO ON"></div>
+ <div> BLOOD COMES AND GOES. PEOPLE REMAIN.</div>
+
+</div>
+
+
+
+
+    <input type="text" ng-model="currentNum.text" id="target"/>
+
+
+<canvas id="box2d-demo" width="1200" height="650" style="background-color:white;"></canvas>
+<script src="js/myApp.min.js"></script>
+<script src="js/box2d-web-2.1.a.3.js"></script>
+<!-- <script src="js/bloodbox.js"></script> -->
+
+
+
+
+
+
+
+
+</body>
+</html>

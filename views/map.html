@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<% include title %>
+<% include library %>
+<link rel="stylesheet" type="text/css" href="css/map.css">
+
+
+
+
+<!-- DEFINE group NAME AND LOCATION VARIABLES -->
+<% if (!(lat&&lon)) { %>
+     <script>
+     var lat = "13.764928";
+     var lon = "100.538293";
+     var latlon = "13.764928,100.538293"; var zoom = "17";
+     </script>
+<% }else{ %>
+     <script>
+     var lat = "<%= lat %>";
+     var lon = "<%= lon %>";
+     var latlon = "<%= lat %>" + "," + "<%= lon %>"; var zoom = "18";
+     </script>
+<% } %>
+
+<!-- END OF group NAME AND LOCATION VARIABLES -->
+
+
+</head>
+
+<body>
+<div class="load"><div class="loader">Loading...</div></div>
+<div id="mapContainer">
+           <input id="pac-input" class="controls" type="text" placeholder="ค้นหาจากชื่อสถานที่">
+         
+
+          <div id="map-canvas"></div>
+
+          <!-- <div id="horiline"></div><div id="vertiline"></div> -->
+          <div id="pointer"></div><div id="pointerOuter"></div>
+
+          <div id="fellowInfo">
+
+                      <div class="ui fluid right labeled icon white button homeButton" id="closeButton">
+                   
+                        <div class="lightText smallerText">ปิด</div>     <i class="remove icon"></i>
+                      </div>
+
+          <div class="infoContainer"> 
+          <div><i class="theme icon"></i>กรุ๊ป<span id="groupInfo"></span></div>
+          <div><i class="user icon"></i><span id="userInfo"></span></div></div>
+                      <a href="#" class="ui fluid right labeled icon pink button" id="thisLink">
+                       
+                        <div>เข้าดู</div> <i class="right arrow icon"></i>
+                      </a>
+
+          </div>
+
+
+          <div class="mapMenu">
+                    
+                   
+                    <div class="row">
+                      <div class="col-6 padding0">
+                               <a class="ui fluid icon blue button homeButton" id="newGroupButton">
+                              <i class="announcement icon"></i>
+                            
+                            </a>
+                        
+                      </div>
+                     <div class="col-6 padding0">
+                  
+                              <a class="ui fluid icon blue button homeButton" href="/home">
+                   
+                         <i class="home icon"></i>
+                      </a>
+                         
+                                        
+                      </div>
+
+
+
+                    </div>
+
+                   
+
+          </div>
+</div> <!-- END OF MAP CONTAINER -->
+
+                      <div id="activities">
+                              <div class="ui fluid right labeled icon black button" id="closeActivities">
+                   
+                        <div>ลงประกาศ</div>     <i class="remove icon"></i>
+                      </div>
+                           <% include activities %>
+                      </div>
+
+
+<script type="text/javascript" src="js/map.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNl8tYOvWqEZ453CrQRGqRcnCXF-dUXQ&libraries=places&callback=initMap" async defer></script>
+
+
+
+<% include analytic %>
+</body>
+
+</html>

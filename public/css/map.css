@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&subset=thai');
+
+
+
+
+
+      #map-canvas {
+        font-family: 'Kanit', sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+      }
+
+      .controls {
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        z-index:980;
+        box-shadow: none;
+      }
+
+
+
+
+      #pac-input {
+        position: fixed !important;
+        z-index:980 !important;
+        top:0 !important;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 200;
+        margin:0;
+        padding: 0 11px 0 35px;
+        text-overflow: ellipsis;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0px;
+        border:1px solid rgba(0,0,0,0.05);
+        color:#05b0fa;
+        background:#fff url(findicon.gif) no-repeat scroll left center;
+      }
+
+
+      #pac-input:focus {
+        border-color: #05b0fa;
+      }
+
+
+
+  #pointer{
+  width: 3px;
+  height: 3px;
+  background-color: #1dafff; 
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  border-radius: 100%;
+  }
+
+  #pointerOuter{
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(29, 175, 255, 0.7);
+  background: rgba(29, 175, 255, 0.015);
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  border-radius: 100%;
+  }
+
+
+
+
+
+
+
+      #horiline{
+        position: absolute;
+        opacity: 0.5;
+        height: 0px;
+        border-top:1px dotted #1dafff;
+        margin-top:-1px;
+        width: 100%;
+        left:0;
+        top:50%;
+        z-index: 999;
+      }
+
+      #vertiline{
+        position: absolute;
+        border-left:1px dotted #1dafff;
+        opacity: 0.5;
+        width: 1px;
+        top:0;
+        bottom:0;
+        left:50%;
+        margin-left: -1px;
+        z-index: 999;
+      }
+
+.dashboard {
+  z-index: 1000;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+.mapMenu {
+  z-index: 998;
+  position: fixed;
+  height:auto;
+  left:0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.textMenu{
+  position: fixed;
+  top:32px;
+  z-index: 200;
+  font-weight: 400;
+  width: 100%;
+  font-size: 0.9em;
+  background:rgba(255,255,255,0.9);
+  text-align: center;
+}
+
+#theAddress {
+  border-radius: none !important;
+  font-size: 0.9em;
+}
+
+
+#status {
+padding: 5px 15px 20px 15px;
+text-align: center;
+font-size: 0.9em;
+}
+
+#login, #finalForm {
+display: none;
+}
+
+#post {
+  position: relative;
+}
+
+/* @media(max-width: 700px) {
+          #post {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+ }
+*/
+
+
+/*
+***************MAY BE DELETED******************/
+#info{
+
+  opacity: 1.0;
+
+
+  margin:5px;
+  padding: 3px;
+}
+
+#fellowInfo {
+  position: absolute;
+  display: none;
+  z-index: 2000;
+  top:35%;
+  left:15%;
+  right:15%;
+  height: auto;
+  background-color:white; 
+  color:black;
+  line-height: 1.3em;
+
+}
+
+.infoContainer{
+  margin:10px;
+
+}
+
+#closeButton, #thisLinke {
+  border: none !important;
+}
+
+#activities {
+  position: absolute;
+  top:0;
+  width: 100%;
+  display: none;
+  background: white;
+  z-index:1002;
+}
+
+/*
+***************MAY BE DELETED******************/
+

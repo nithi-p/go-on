@@ -1,0 +1,25 @@
+{
+  "name": "couchdb-server-side",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "ejs": "*",
+    "express": "4.x",
+    "semantic-ui-button": "2.2.3",
+    "semantic-ui-divider": "2.2.3",
+    "semantic-ui-grid": "2.2.3",
+    "semantic-ui-icon": "2.2.3",
+    "semantic-ui-input": "2.2.3",
+    "semantic-ui-label": "2.2.3"
+  },
+  "description": "## Getting Started",
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

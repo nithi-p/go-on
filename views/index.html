@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+<% include title %>
+
+
+<% include library %>
+<% include angularfire %>
+
+
+
+
+
+</head>
+<body ng-controller="myCtrl">
+
+<header>
+     <% include header1 %>
+</header>
+<div class="ui container">
+<div class="row">
+      <div class="col-12 stackable">
+           <a class="ui fluid right labeled huge icon blue button" id="searching">
+             <div class="leftAlign">ให้ <span class="lightText"> | บริจาคโลหิตให้คนใกล้ๆคุณ</span> </div> <i class="heart icon"></i>  
+           </a> 
+    </div>
+
+
+     <div class="col-12 stackable">
+           <a class="ui fluid  right labeled huge icon red button" href="#asking" id="asking">
+      <div class="leftAlign">รับ <span class="lightText"> | ขอรับบริจาคโลหิต</span></div>         <i class="announcement icon"></i> 
+           </a> 
+    </div>     
+           <div class="displayNone">
+                   <% include activities %>
+                   <div>&nbsp;</div>
+           </div>
+</div>
+</div>
+
+
+
+<footer>
+
+    <% include footer %>
+
+</footer>
+
+<script type="text/javascript" src="js/index.js"></script>
+<% include analytic %>
+</body>
+</html>
