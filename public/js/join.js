@@ -182,7 +182,7 @@ app.controller("myCtrl", function($scope, $firebaseObject, $firebaseArray) {
 		    	} // END SIGN FUNCTION
 
 		    	$scope.loginIOS =  function() {
-		    			 var redirectUrl = "http://www.go-on.co/join?login=true"; 
+		    			 var redirectUrl = "https://go-on.herokuapp.com/join?login=true"; 
    						 window.open('https://www.facebook.com/dialog/oauth?client_id=1325948244115986&redirect_uri='+ redirectUrl, '', null);
 		    	}
 

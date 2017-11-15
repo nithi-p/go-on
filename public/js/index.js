@@ -79,7 +79,7 @@ $( ".bloodButton" ).click(function() {
 });
 
 $( "#chrome" ).click(function() {
-    var redirectUrl = "http://www.go-on.co/chrome?group=" + thisGroup; 
+    var redirectUrl = "https://go-on.herokuapp.com/chrome?group=" + thisGroup; 
     window.open('https://www.facebook.com/dialog/oauth?client_id=1325948244115986&redirect_uri='+ redirectUrl, '', null);
 });
 
@@ -282,7 +282,7 @@ app.controller("myCtrl", function($scope, $firebaseObject, $firebaseArray) {
           } // END SIGN FUNCTION
 
           $scope.loginIOS =  function() {
-               var redirectUrl = "http://www.go-on.co/join"; 
+               var redirectUrl = "https://go-on.herokuapp.com/join"; 
                window.open('https://www.facebook.com/dialog/oauth?client_id=1325948244115986&redirect_uri='+ redirectUrl, '', null);
           }
 

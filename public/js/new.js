@@ -140,7 +140,7 @@ function postLinkToFB() {
     FB.ui( {
         method: 'feed',
         name: postname,
-        link: "http://www.go-on.co/a/" + postUID,
+        link: "https://go-on.herokuapp.com/a/" + postUID,
         picture: postpicture,
         caption: "คลิก เพื่อดูรายละเอียด | GO-ON.CO" ,
         description: postdescription

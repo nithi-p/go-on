@@ -204,7 +204,7 @@ function postLinkToFB() {
     FB.ui( {
         method: 'feed',
         name: postname,
-        link: "http://www.go-on.co/a/" + mykey,
+        link: "https://go-on.herokuapp.com/a/" + mykey,
         picture: postpicture,
         caption: "คลิก เพื่อร่วมบริจาค | GO-ON.CO" ,
         description: postdescription

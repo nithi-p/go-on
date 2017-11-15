@@ -30,7 +30,7 @@ function handleNoGeolocation(errorFlag) {
   }
 
   alert(content);
-          var theUrl = "http://www.go-on.co/map" ; //PRODUCTION
+          var theUrl = "https://go-on.herokuapp.com/map" ; //PRODUCTION
           window.location.replace(theUrl);
   }
 
@@ -40,7 +40,7 @@ function handleNoGeolocation(errorFlag) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
       if(latitude && longitude){
-          var theUrl = "http://www.go-on.co/map?" + "&lat=" + latitude + "&lon=" + longitude;  //PRODUCTION
+          var theUrl = "https://go-on.herokuapp.com/map?" + "&lat=" + latitude + "&lon=" + longitude;  //PRODUCTION
           window.location.replace(theUrl);
       }else{
           handleNoGeolocation(true);

@@ -29,7 +29,7 @@ function handleNoGeolocation(errorFlag) {
 
   alert(content);
 
-          var theUrl = "http://www.go-on.co/new?group=" + group; //PRODUCTION
+          var theUrl = "https://go-on.herokuapp.com/new?group=" + group; //PRODUCTION
           window.location.replace(theUrl);
   }
 
@@ -39,7 +39,7 @@ function handleNoGeolocation(errorFlag) {
       var latitude = position.coords.latitude;
       var longitude = position.coords.longitude;
       if(latitude && longitude){
-          var theUrl = "http://www.go-on.co/new?group=" + group + "&lat=" + latitude + "&lon=" + longitude;  //PRODUCTION
+          var theUrl = "https://go-on.herokuapp.com/new?group=" + group + "&lat=" + latitude + "&lon=" + longitude;  //PRODUCTION
           /*var theUrl = "/new?group=" + group + "&lat=" + latitude + "&lon=" + longitude;*/
           window.location.replace(theUrl);
       }else{
